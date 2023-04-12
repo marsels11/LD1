@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <title>1. Praktiskais darbs</title>
+</head>
+<body>
+    <h1> NUMBER GAME</h1>
+    
+    <div id = "choosePlayer">
+        <label for = "selection"> </label>
+        <select name = "selection" id="option">
+            <option value = "user"> User </option>
+            <option value = "computer"> Computer </option>
+        </select>
+    </div>
+
+    <button class = "startButton" id = "button" onclick = "startGame()"> Start Game! </button>   
+
+    <div class = "score">
+        <div class = "scoreArea userPoints"> User </div>
+        <div class = "scoreArea computerPoints"> Computer </div>
+        <div class = "scoreResult" id="userPointsArea"> 0 </div>
+        <div class = "scoreResult" id="computerPointsArea"> 0 </div>
+    </div>
+
+    <div id = "gameBoard"></div>
+    <h2 id = "winner"></h2>
+
+    <h3>SPĒLES NOTEIKUMI:</h3>
+    <p class = "gameRules"> 
+        Spēles sākumā ir dota skaitļu virkne: 5-4-7-9-2-6-3.
+        <br> Sākumā ir jāizvēlas, kurš spēlētājs veiks pirmo gājienu.
+        <br> Spēlētājs, kas veic gājienu var izvēlēties tikai 2 skaitļus, kurus summēt.
+        <br> Ja skaitļu summa ir <u>lielāka par 9</u>, tad šos skaitļus <u>aizvieto ar skaitli 3</u> un spēlētājam tiek <u>pieskaitīti 2 punkti</u>.
+        <br> Ja skaitļu summa ir <u>mazāka par 9</u>, tad šos skaitļus <u>aizvieto ar skaitli 2</u> un spēlētājam tiek <u>pieskaitīti 3 punkti</u>.
+        <br> Ja skaitļu summa ir <u>vienāda ar 9</u>, tad šos skaitļus <u>aizvieto ar skaitli 4</u> un pretiniekam tiek <u>atņemti 2 punkti</u>.
+        <br> Spēle beidzas, kad skaitļu virknē ir palicis tikai viens skaitlis.
+        <br> Spēli uzvar tas spēlētājs, kuram spēles beigās ir <u>lielāks punktu skaits</u>.
+    </p>
+
+    <p id = "computerMadeMove"></p>
+    <p id = "computerMadeMoveScore"></p>
+     
+    <script src="script.js"></script>
+    
+</body>
+</html>
